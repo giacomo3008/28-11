@@ -5,11 +5,76 @@
 html,
 body{
     margin: 0;
-    padding: 0;
+    padding: 0; 
+    color: #333;
+    font-family: 'Bree Serif', sans-serif;
 }
 
-.testoAlternato{
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
 
+#testoAlternato{
+    border: 2px solid black;
+    padding: 1rem;
+    padding-right: 8rem;
+    position: relative;
+}
+
+.parole{
+    position: absolute;
+    overflow: hidden;
+    top: 48px;
+    left: 210px;
+    height: 20px;
+    width: 150px;
+    color: #6b969d;
+}
+
+.parole i{
+    position: absolute;
+    opacity: 0;
+    /* top: -30px; */
+    animation-name: moveText;
+	animation-duration: 6s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-delay: 0s;
+}
+
+.parole i:nth-child(2){
+    animation-delay: 2s;
+}
+
+.parole i:nth-child(3){
+    animation-delay: 4s;
+}
+
+@keyframes moveText{
+    25%{
+        opacity: 0;
+        top: -10px;
+    }
+    50%{
+        opacity: 1;
+        top: 0px;
+    }
+    65%{
+        opacity: 1;
+        top: 0px;
+    }
+    80%{
+        opacity: 0;
+        top: 10px;
+    }
+    to{
+        opacity: 0;
+        top: 25px;
+    }
 }
 /*
 1 creazione del testo e formattazione di 1 parola da far ruotare
